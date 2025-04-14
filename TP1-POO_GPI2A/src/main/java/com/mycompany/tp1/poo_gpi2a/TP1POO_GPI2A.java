@@ -10,6 +10,8 @@ public class TP1POO_GPI2A {
         int A_CARGAR;
         float[] NOTAS;
         float MAYOR = 0;
+        int APROBADOS = 0;
+        int DESAPROBADOS = 0;
         
         System.out.println("Ingrese la cantidad de notas a cargar: ");
         A_CARGAR = scanner.nextInt();
@@ -35,9 +37,18 @@ public class TP1POO_GPI2A {
             if (nota > MAYOR) {
                 MAYOR = nota;
             }
+            
+            // EJERCICIO 2
+            if (nota >= 6) {
+                APROBADOS += 1;
+            } else {
+                DESAPROBADOS += 1;
+            }
         }
         
-        System.out.println("La nota mayor cargada es: " + MAYOR); 
+        System.out.println("La mayor nota cargada es: " + MAYOR); 
+        System.out.println("Hay " + APROBADOS + " aprobados y " + DESAPROBADOS + " desaprobados");
+        
         scanner.close();
     }
 }
