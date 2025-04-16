@@ -29,9 +29,9 @@ public class TP1POO_GPI2A {
                 if (nota < 0 || nota > 10) {
                     System.out.println("Nota invalida. Debe estar entre 0 y 10.");
                 }
-                
-                NOTAS[i] = nota;
             }
+            
+            NOTAS[i] = nota;
         }
         
         for (float nota : NOTAS) {
