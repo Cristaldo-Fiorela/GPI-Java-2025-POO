@@ -33,22 +33,21 @@ public class LIBRETA {
     
     public void getMayorNota() {
         
-        if (NOTAS.length > 0) {         
-            for (float nota : NOTAS) {
+       if (isEmpty(NOTAS)) {
+            return;
+        }
+        
+        for (float nota : NOTAS) {
                 if (nota > MAYOR) {
                     MAYOR = nota;
                 }
             }  
-            System.out.println("La mayor nota cargada es: " + MAYOR);
-        } else  {
-            System.out.println("No hay notas existentes, ejecute el metodo setNotas() para realizar su carga");
-        }
+        System.out.println("La mayor nota cargada es: " + MAYOR);
     }
     
     public void getAlumnosEstatus() {
         
-        if (NOTAS.length < 0) {
-            System.out.println("No hay notas existentes, ejecute el metodo setNotas() para realizar su carga");
+        if (isEmpty(NOTAS)) {
             return;
         }
         
@@ -62,5 +61,11 @@ public class LIBRETA {
         System.out.println("Hay " + APROBADOS + " aprobados y " + DESAPROBADOS + " desaprobados");
 
     }
-    
+   
+    private boolean isEmpty(float[] arr) {
+        if (arr.length < 0) {
+            System.out.println("No hay notas existentes, ejecute el metodo setNotas() para realizar su carga");
+        }
+        return arr.length < 0;
+    }
 }
