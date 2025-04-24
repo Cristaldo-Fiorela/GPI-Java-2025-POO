@@ -5,25 +5,7 @@ import java.util.Scanner;
 public class TP1POO_GPI2A {
 
     public static void main(String[] args) {
-        
-        
-        
-        for (float nota : NOTAS) {
-            if (nota > MAYOR) {
-                MAYOR = nota;
-            }
-            
-            // EJERCICIO 2
-            if (nota >= 6) {
-                APROBADOS += 1;
-            } else {
-                DESAPROBADOS += 1;
-            }
-        }
-        
-        System.out.println("La mayor nota cargada es: " + MAYOR); 
-        System.out.println("Hay " + APROBADOS + " aprobados y " + DESAPROBADOS + " desaprobados");
-        
+        Scanner scanner = new Scanner(System.in);
         // EJERCICIO 3
         int[] CANTIDADES;
         double[] COSTOS;

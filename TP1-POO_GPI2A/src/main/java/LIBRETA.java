@@ -1,14 +1,13 @@
 import java.util.Scanner;
 
 public class LIBRETA {
-     // EJERCICIO 1
     Scanner scanner = new Scanner(System.in);
-    int A_CARGAR;
-    float[] NOTAS;
-    float MAYOR = 0;
+    private int A_CARGAR;
+    private float[] NOTAS;
+    private float MAYOR = 0;
     // EJERCICIO 2
-    int APROBADOS = 0;
-    int DESAPROBADOS = 0;
+    private int APROBADOS = 0;
+    private int DESAPROBADOS = 0;
     
     public void setNotas() {
         System.out.println("Ingrese la cantidad de notas a cargar: ");
@@ -41,8 +40,21 @@ public class LIBRETA {
                 }
             }  
         } else  {
-            System.out.println("U");
+            System.out.println("No hay notas existentes, ejecute el metodo setNotas()");
         }
+        
+        System.out.println("La mayor nota cargada es: " + MAYOR);
+    }
+    
+    public void getAlumnosEstatus() {
+        for (float nota : NOTAS) {
+            if (nota >= 6) {
+                APROBADOS += 1;
+            } else {
+                DESAPROBADOS += 1;
+            }
+        }
+        System.out.println("Hay " + APROBADOS + " aprobados y " + DESAPROBADOS + " desaprobados");
 
     }
     
