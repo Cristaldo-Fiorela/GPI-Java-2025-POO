@@ -39,14 +39,19 @@ public class LIBRETA {
                     MAYOR = nota;
                 }
             }  
+            System.out.println("La mayor nota cargada es: " + MAYOR);
         } else  {
-            System.out.println("No hay notas existentes, ejecute el metodo setNotas()");
+            System.out.println("No hay notas existentes, ejecute el metodo setNotas() para realizar su carga");
         }
-        
-        System.out.println("La mayor nota cargada es: " + MAYOR);
     }
     
     public void getAlumnosEstatus() {
+        
+        if (NOTAS.length < 0) {
+            System.out.println("No hay notas existentes, ejecute el metodo setNotas() para realizar su carga");
+            return;
+        }
+        
         for (float nota : NOTAS) {
             if (nota >= 6) {
                 APROBADOS += 1;
