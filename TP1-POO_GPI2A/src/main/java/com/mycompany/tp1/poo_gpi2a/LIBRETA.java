@@ -1,3 +1,5 @@
+package com.mycompany.tp1.poo_gpi2a;
+
 import java.util.Scanner;
 
 public class LIBRETA {
