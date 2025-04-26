@@ -60,4 +60,21 @@ public class GestorCamiones {
         
     }
 
+    public int getCamionesTe() {
+        int total = 0;
+
+        for (int fila = 0; fila < totalCamiones; fila++) {
+            for (int columna = 0; columna < cantidadDatosAPedir; columna++) {
+                if (planilla[fila][columna] == "te" || planilla[fila][columna] == "té" ) { 
+                    total++;
+                }
+            }
+
+        }
+
+        return total;
+    }
+    
+    
+
 }
