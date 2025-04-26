@@ -34,10 +34,6 @@ public class PRODUCTOS {
     }
     
     public double getTotal() {
-        if (CANTIDADES.length == 0 || COSTOS.length == 0) {
-            throw new IllegalStateException("No hay datos existentes, ejecute el metodo setProductos() para realizar su carga");
-        }
-        
         double TOTAL = 0;
         for (double precio : COSTOS) {
             TOTAL =+ precio;
@@ -46,11 +42,7 @@ public class PRODUCTOS {
         return TOTAL;
     }
     
-    public int getMayorAMil() {
-        if (CANTIDADES.length == 0 || COSTOS.length == 0) {
-            throw new IllegalStateException("No hay datos existentes, ejecute el metodo setProductos() para realizar su carga");
-        }
-        
+    public int getMayorAMil() {     
         int MAYOR = 0;
         for (double precio : COSTOS) {
             if (precio > 1000) {

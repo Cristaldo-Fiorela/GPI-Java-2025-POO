@@ -38,11 +38,6 @@ public class LIBRETA {
     }
     
     public float getMayorNota() {
-        
-       if (NOTAS.length == 0) {
-            throw new IllegalStateException("No hay notas existentes, ejecute el metodo setNotas() para realizar su carga");
-        }
-        
        float MAYOR = 0;
 
         for (float nota : NOTAS) {

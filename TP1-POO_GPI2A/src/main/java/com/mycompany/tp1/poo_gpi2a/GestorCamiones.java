@@ -19,7 +19,7 @@ public class GestorCamiones {
         this.planilla = new String[totalCamiones][cantidadDatosAPedir];
     }
     
-    public void setDatos() {
+    public void setPlanilla() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("A continuacion ingrese los datos pedidos de los camiones:");
         
@@ -75,6 +75,13 @@ public class GestorCamiones {
         return total;
     }
     
-    
+    public void getPlanilla() {
+        for (int fila = 0; fila < totalCamiones; fila++) {
+            for (int columna = 0; columna < cantidadDatosAPedir; columna++) {
+                System.out.print( planilla[fila][columna]+ " "); 
+            }
+            System.out.println("");
+        }
+    }
 
 }

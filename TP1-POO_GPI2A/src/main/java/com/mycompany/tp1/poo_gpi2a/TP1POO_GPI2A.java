@@ -24,7 +24,10 @@ public class TP1POO_GPI2A {
        */
         
         // EJERCICIO 4
-
+        
+        GestorCamiones planilla = new GestorCamiones();
+        
+        planilla.getPlanilla();
     }
 
 }
