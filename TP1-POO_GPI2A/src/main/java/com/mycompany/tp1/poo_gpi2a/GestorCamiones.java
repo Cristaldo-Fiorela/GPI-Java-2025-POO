@@ -4,18 +4,16 @@ import java.util.Scanner;
 
 public class GestorCamiones {
     private int totalCamiones;
-    private int cantidadDatosAPedir;
+    private int cantidadDatosAPedir = 4;
     private String[][] planilla;
 
     public GestorCamiones() {
         this.totalCamiones = 30;        
-        this.cantidadDatosAPedir = 4;
         this.planilla = new String[totalCamiones][cantidadDatosAPedir];
     }
 
-    public GestorCamiones(int totalCamiones, int cantidadDatosAPedir) {
+    public GestorCamiones(int totalCamiones) {
         this.totalCamiones = totalCamiones;
-        this.cantidadDatosAPedir = cantidadDatosAPedir;
         this.planilla = new String[totalCamiones][cantidadDatosAPedir];
     }
     
