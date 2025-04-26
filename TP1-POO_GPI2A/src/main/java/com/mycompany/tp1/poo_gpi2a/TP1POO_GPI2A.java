@@ -6,6 +6,17 @@ public class TP1POO_GPI2A {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
+        // EJERCICIO 1
+        LIBRETA libreta = new LIBRETA();
+        
+        libreta.setNotas();
+        System.out.println("La la mayor nota ingresada es: " + libreta.getMayorNota());
+        
+        // EJERCICIO 2
+        libreta.getAlumnosAprobadosDesaprobados();
+        
+        /*
         // EJERCICIO 3
         int[] CANTIDADES;
         double[] COSTOS;
@@ -28,5 +39,8 @@ public class TP1POO_GPI2A {
         System.out.println(Arrays.toString(COSTOS));
         
         scanner.close();
+
+        */
     }
+
 }

@@ -3,15 +3,19 @@ package com.mycompany.tp1.poo_gpi2a;
 import java.util.Scanner;
 
 public class LIBRETA {
-    Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
     private int A_CARGAR;
     private float[] NOTAS;
-    private float MAYOR = 0;
-    // EJERCICIO 2
-    private int APROBADOS = 0;
-    private int DESAPROBADOS = 0;
+
+    public LIBRETA() {
+    }
+
+    public LIBRETA(float[] NOTAS) {
+        this.A_CARGAR = NOTAS.length;
+        this.NOTAS = NOTAS;
+    }
     
-    public void setNotas() {
+    public void setNotas() {   
         System.out.println("Ingrese la cantidad de notas a cargar: ");
         A_CARGAR = scanner.nextInt();
         
@@ -33,26 +37,32 @@ public class LIBRETA {
         }
     }
     
-    public void getMayorNota() {
+    public float getMayorNota() {
         
-       if (isEmpty(NOTAS)) {
-            return;
+       if (NOTAS.length == 0) {
+            throw new IllegalStateException("No hay notas existentes, ejecute el metodo setNotas() para realizar su carga");
         }
         
+       float MAYOR = 0;
+
         for (float nota : NOTAS) {
                 if (nota > MAYOR) {
                     MAYOR = nota;
                 }
             }  
-        System.out.println("La mayor nota cargada es: " + MAYOR);
+        
+        return MAYOR;
     }
     
-    public void getAlumnosEstatus() {
-        
-        if (isEmpty(NOTAS)) {
-            return;
+    public void getAlumnosAprobadosDesaprobados() {
+             
+       if (NOTAS.length == 0) {
+            throw new IllegalStateException("No hay notas existentes, ejecute el metodo setNotas() para realizar su carga");
         }
-        
+         
+        int APROBADOS = 0;
+        int DESAPROBADOS = 0;
+
         for (float nota : NOTAS) {
             if (nota >= 6) {
                 APROBADOS += 1;
@@ -63,11 +73,5 @@ public class LIBRETA {
         System.out.println("Hay " + APROBADOS + " aprobados y " + DESAPROBADOS + " desaprobados");
 
     }
-   
-    private boolean isEmpty(float[] arr) {
-        if (arr.length < 0) {
-            System.out.println("No hay notas existentes, ejecute el metodo setNotas() para realizar su carga");
-        }
-        return arr.length < 0;
-    }
+
 }
