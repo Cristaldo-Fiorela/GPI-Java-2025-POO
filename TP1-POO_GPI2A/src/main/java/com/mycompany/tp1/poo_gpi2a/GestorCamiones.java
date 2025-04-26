@@ -40,7 +40,7 @@ public class GestorCamiones {
                         while(!cargaValida) {
                             System.out.println("Ingrese el TIPO DE CARGA (te, yerba o mate) del camion #" + fila + 1);
                             String carga = scanner.next().toLowerCase();
-                            if (carga == "te" || carga == "té" || carga == "yerba" || carga == "mate") {
+                            if ("te".equals(carga) || "té".equals(carga) || "yerba".equals(carga) || "mate".equals(carga)) {
                                 planilla[fila][columna] = carga;
                                 cargaValida = true;
                             } else {
@@ -65,7 +65,7 @@ public class GestorCamiones {
 
         for (int fila = 0; fila < totalCamiones; fila++) {
             for (int columna = 0; columna < cantidadDatosAPedir; columna++) {
-                if (planilla[fila][columna] == "te" || planilla[fila][columna] == "té" ) { 
+                if ("te".equals(planilla[fila][columna]) || "té".equals(planilla[fila][columna]) ) { 
                     total++;
                 }
             }
@@ -80,7 +80,7 @@ public class GestorCamiones {
             for (int columna = 0; columna < cantidadDatosAPedir; columna++) {
                 System.out.print( planilla[fila][columna]+ " "); 
             }
-            System.out.println("");
+            System.out.println("Camion #" + (fila + 1));
         }
     }
 

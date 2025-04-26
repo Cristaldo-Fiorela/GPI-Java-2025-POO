@@ -25,8 +25,10 @@ public class TP1POO_GPI2A {
         
         // EJERCICIO 4
         
-        GestorCamiones planilla = new GestorCamiones();
+        GestorCamiones planilla = new GestorCamiones(2, 4);
         
+        planilla.setPlanilla();
+        System.out.println("La cantidad de camiones que transportan te es: " + planilla.getCamionesTe());
         planilla.getPlanilla();
     }
 
