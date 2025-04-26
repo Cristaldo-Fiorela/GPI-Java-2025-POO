@@ -33,16 +33,19 @@ public class PRODUCTOS {
         }
     }
     
-    public float getTotal() {
+    public double getTotal() {
         if (CANTIDADES.length == 0 || COSTOS.length == 0) {
             throw new IllegalStateException("No hay datos existentes, ejecute el metodo setProductos() para realizar su carga");
         }
         
-        float TOTAL = 0;
-        
+        double TOTAL = 0;
+        for (double precio : COSTOS) {
+            TOTAL =+ precio;
+        }
         
         return TOTAL;
     }
+    
     
 
 
