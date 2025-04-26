@@ -12,6 +12,14 @@ public class TP1POO_GPI2A {
         // EJERCICIO 2
         libreta.getAlumnosAprobadosDesaprobados();
 
+        // EJERCICIO 3
+        PRODUCTOS productos = new PRODUCTOS();
+        
+        
+        productos.setProductos();
+        System.out.println("El total de los productos ingresados es: $" + productos.getTotal());
+        System.out.println("El total de los productos MAYORES a $1000 es: " + productos.getMayorAMil());
+
     }
 
 }
