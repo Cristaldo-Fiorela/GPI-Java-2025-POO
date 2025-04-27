@@ -45,6 +45,18 @@ public class TP1POO_GPI2A {
 
          */
         
+        // EJERCICIO 6
+             
+        // Constructor con nro de competidores default (12).
+        //Carrera carrera = new Carrera();
+
+        // Constructor con nro de competidores personalizado.
+        Carrera carrera = new Carrera(2);
+        
+        carrera.setListaCompetidores();
+        System.out.println(carrera.getMejorCompetidor());
+        
+        
     }
 
 }

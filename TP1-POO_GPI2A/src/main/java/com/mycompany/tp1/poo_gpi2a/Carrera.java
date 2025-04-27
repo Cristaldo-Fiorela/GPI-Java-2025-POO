@@ -48,6 +48,6 @@ public class Carrera {
             }
         }
         
-        return "El vehiculo nro " + auto + " se lleva el premio a mejor tiempo con " + tiempo + " segundos.";
+        return "El vehiculo nro " + auto + " se lleva el premio a mejor tiempo con " + tiempo + " segundos de carrera.";
     }
 }
