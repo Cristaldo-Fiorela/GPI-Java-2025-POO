@@ -32,9 +32,7 @@ public class TP1POO_GPI2A {
         planilla.setPlanilla();
         System.out.println("La cantidad de camiones que transportan te es: " + planilla.getCamionesTe());
         planilla.getPlanilla();
-        
-         */
-        
+    
         // EJERCICIO 5
         // Constructor con nro de clientes por default (5)
         Internet gestorInternet = new Internet();
@@ -44,6 +42,9 @@ public class TP1POO_GPI2A {
         
         gestorInternet.setClientes();
         gestorInternet.getInforme();
+
+         */
+        
     }
 
 }
