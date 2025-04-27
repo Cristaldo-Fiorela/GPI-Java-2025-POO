@@ -10,7 +10,10 @@ public class Censo {
         this.censo = censo;
     }
     
-        
+    
+    public int getTotalCensado() {
+        return censo.length;
+    }
     
     /*
         DNI, EDAD, SEXO
