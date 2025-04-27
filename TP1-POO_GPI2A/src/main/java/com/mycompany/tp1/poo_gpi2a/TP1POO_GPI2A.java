@@ -21,8 +21,6 @@ public class TP1POO_GPI2A {
         System.out.println("El total de los productos ingresados es: $" + productos.getTotal());
         System.out.println("El total de los productos MAYORES a $1000 es: " + productos.getMayorAMil());
         
-       */
-        
         // EJERCICIO 4
         
         // Constructor con 30 camiones
@@ -34,6 +32,19 @@ public class TP1POO_GPI2A {
         planilla.setPlanilla();
         System.out.println("La cantidad de camiones que transportan te es: " + planilla.getCamionesTe());
         planilla.getPlanilla();
+        
+         */
+        
+        // EJERCICIO 5
+        /*
+            calculo de monto a pagar  dependiendo del tipo de servicio
+            5 clientes
+            por teclado: DNI y tipo de servicio 
+                Internet => 30 mg  $750
+                            50 mg  $1100
+                            100 mg $1500 - menos 5% de descuento por promocion
+            informar por pantalla el DNI y el monto a pagar y su servicio.
+        */
     }
 
 }
