@@ -36,7 +36,12 @@ public class TP1POO_GPI2A {
          */
         
         // EJERCICIO 5
-        Internet gestorInternet = new Internet(2);
+        // Constructor con nro de clientes por default (5)
+        Internet gestorInternet = new Internet();
+
+        // Constructor con nro de clientes personalizado.
+        //Internet gestorInternet = new Internet(2);
+        
         gestorInternet.setClientes();
         gestorInternet.getInforme();
     }
