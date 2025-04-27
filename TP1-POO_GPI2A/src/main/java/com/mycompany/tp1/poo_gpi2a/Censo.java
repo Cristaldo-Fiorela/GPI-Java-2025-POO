@@ -1,5 +1,7 @@
 package com.mycompany.tp1.poo_gpi2a;
 
+import java.util.Scanner;
+
 public class Censo {
     private String[][] censo;
 
@@ -8,6 +10,12 @@ public class Censo {
 
     public Censo(String[][] censo) {
         this.censo = censo;
+    }
+    
+    public void setCenso() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese sus datos a continuacion");
+
     }
     
     

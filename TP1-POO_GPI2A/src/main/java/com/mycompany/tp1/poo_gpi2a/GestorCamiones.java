@@ -25,18 +25,18 @@ public class GestorCamiones {
             for (int columna = 0; columna < cantidadDatosAPedir; columna++) {
                 switch(columna) {
                     case 0:
-                        System.out.println("Ingrese la PATENTE del camion #" + fila + 1);
+                        System.out.println("Ingrese la PATENTE del camion #" + (fila + 1));
                         planilla[fila][columna] = scanner.next().toLowerCase();
                         break;
                     case 1:
-                        System.out.println("Ingrese el NOMBRE y APELLIDO del chofer del camion #" + fila + 1);
+                        System.out.println("Ingrese el NOMBRE y APELLIDO del chofer del camion #" + (fila + 1));
                         planilla[fila][columna] = scanner.next().toLowerCase();
                         break;
                     case 2:
                         boolean cargaValida = false;
                         
                         while(!cargaValida) {
-                            System.out.println("Ingrese el TIPO DE CARGA (te, yerba o mate) del camion #" + fila + 1);
+                            System.out.println("Ingrese el TIPO DE CARGA (te, yerba o mate) del camion #" + (fila + 1));
                             String carga = scanner.next().toLowerCase();
                             if ("te".equals(carga) || "té".equals(carga) || "yerba".equals(carga) || "mate".equals(carga)) {
                                 planilla[fila][columna] = carga;
@@ -47,7 +47,7 @@ public class GestorCamiones {
                         }
                         break;
                     case 3:
-                        System.out.println("Ingrese la HORA DE EGRESO del camion #" + fila + 1);
+                        System.out.println("Ingrese la HORA DE EGRESO del camion #" + (fila + 1));
                         planilla[fila][columna] = scanner.next().toLowerCase();
                         break;
                 }
