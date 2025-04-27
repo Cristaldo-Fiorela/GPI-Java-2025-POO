@@ -36,15 +36,9 @@ public class TP1POO_GPI2A {
          */
         
         // EJERCICIO 5
-        /*
-            calculo de monto a pagar  dependiendo del tipo de servicio
-            5 clientes
-            por teclado: DNI y tipo de servicio 
-                Internet => 30 mg  $750
-                            50 mg  $1100
-                            100 mg $1500 - menos 5% de descuento por promocion
-            informar por pantalla el DNI y el monto a pagar y su servicio.
-        */
+        Internet gestorInternet = new Internet(2);
+        gestorInternet.setClientes();
+        gestorInternet.getInforme();
     }
 
 }
