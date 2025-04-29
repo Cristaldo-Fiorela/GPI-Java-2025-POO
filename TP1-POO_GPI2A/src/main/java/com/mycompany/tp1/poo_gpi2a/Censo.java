@@ -1,6 +1,7 @@
 package com.mycompany.tp1.poo_gpi2a;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Censo {
@@ -93,9 +94,19 @@ public class Censo {
         return porcentaje;    
     }
     
-    /*
-        informar:
-            - mostrar todos los datos de la persona con mayor edad
-    */
+    public void getMayoresEdad() {
+        ArrayList<String[]> mayores = new ArrayList<>();
+        
+        for (String[] persona : censo) {
+            int edad = Integer.parseInt(persona[1]);
+           
+            if (edad >= 18) {
+              mayores.add(persona);
+            }
+        }
 
+        for (String[] mayor : mayores) {
+            System.out.println(Arrays.toString(mayor));
+        }
+    }
 }
