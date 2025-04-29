@@ -43,7 +43,6 @@ public class TP1POO_GPI2A {
         gestorInternet.setClientes();
         gestorInternet.getInforme();
 
-         */
         
         // EJERCICIO 6
              
@@ -55,7 +54,14 @@ public class TP1POO_GPI2A {
         
         carrera.setListaCompetidores();
         System.out.println(carrera.getMejorCompetidor());
+
+         */
         
+        //EJERCICIO 7
+        Censo censo = new Censo();
+        
+        censo.setCenso();
+        System.out.println("El total de personas censadas fue: " + censo.getTotalCensado());
         
     }
 
