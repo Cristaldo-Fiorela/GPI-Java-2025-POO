@@ -3,15 +3,15 @@ package com.mycompany.tp1.poo_gpi2a;
 import java.util.Scanner;
 
 
-public class PRODUCTOS {
+public class Productos {
     private Scanner scanner = new Scanner(System.in);
     private int[] CANTIDADES;
     private double[] COSTOS;
     
-    public PRODUCTOS() {
+    public Productos() {
     }
 
-    public PRODUCTOS(int[] CANTIDADES, double[] COSTOS) {
+    public Productos(int[] CANTIDADES, double[] COSTOS) {
         this.CANTIDADES = CANTIDADES;
         this.COSTOS = COSTOS;
     }
