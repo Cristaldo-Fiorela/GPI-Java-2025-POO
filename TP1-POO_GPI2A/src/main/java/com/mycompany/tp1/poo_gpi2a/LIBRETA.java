@@ -2,15 +2,15 @@ package com.mycompany.tp1.poo_gpi2a;
 
 import java.util.Scanner;
 
-public class Libreta {
+public class LIBRETA {
     private Scanner scanner = new Scanner(System.in);
     private int A_CARGAR;
     private float[] NOTAS;
 
-    public Libreta() {
+    public LIBRETA() {
     }
 
-    public Libreta(float[] NOTAS) {
+    public LIBRETA(float[] NOTAS) {
         this.A_CARGAR = NOTAS.length;
         this.NOTAS = NOTAS;
     }

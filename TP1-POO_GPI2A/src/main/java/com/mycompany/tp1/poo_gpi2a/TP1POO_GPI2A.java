@@ -6,7 +6,7 @@ public class TP1POO_GPI2A {
         /*
         
         // EJERCICIO 1
-        Libreta libreta = new Libreta();
+        LIBRETA libreta = new LIBRETA();
         
         libreta.setNotas();
         System.out.println("La la mayor nota ingresada es: " + libreta.getMayorNota());
@@ -15,7 +15,7 @@ public class TP1POO_GPI2A {
         libreta.getAlumnosAprobadosDesaprobados();
 
         // EJERCICIO 3
-        Productos productos = new Productos();
+        PRODUCTOS productos = new PRODUCTOS();
         
         productos.setProductos();
         System.out.println("El total de los productos ingresados es: $" + productos.getTotal());
