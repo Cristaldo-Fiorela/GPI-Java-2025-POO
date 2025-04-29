@@ -62,6 +62,8 @@ public class TP1POO_GPI2A {
         
         censo.setCenso();
         System.out.println("El total de personas censadas fue: " + censo.getTotalCensado());
+        System.out.println("El total de hombres es: " + censo.getTotalGenero('M'));
+        System.out.println("El total de mujeres es: " + censo.getTotalGenero('f'));
         
     }
 

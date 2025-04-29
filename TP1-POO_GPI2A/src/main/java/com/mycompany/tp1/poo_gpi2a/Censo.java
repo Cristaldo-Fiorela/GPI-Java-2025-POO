@@ -35,7 +35,7 @@ public class Censo {
             datosPersona[1] = scanner.next();
 
             System.out.println("Ingrese el Sexo (F/M):");
-            datosPersona[2] = scanner.next().toLowerCase();
+            datosPersona[2] = scanner.next().toUpperCase();
 
             censo.add(datosPersona);
         }
@@ -47,17 +47,19 @@ public class Censo {
         return censo.size();
     }
     
-    public int getTotalMujeres() {
-        return 1;
+    public int getTotalGenero(char genero) {
+        int total = 0;
+        for (String[] persona : censo) {
+            String sexo = persona[2];
+            if(Character.toUpperCase(genero) == sexo.charAt(0)) {
+                total++;
+            }
+        }
+        return total;
     }
     
     /*
-        DNI, EDAD, SEXO
-        si se ingresa 0 debe parar de cargar datos en DNI
         informar:
-            - total censado
-            - cantidad varones
-            - cantidad mujeres
             - porcentaje VARONES entre 16 y 65 respecto al TOTAL de varones
             - mostrar todos los datos de la persona con mayor edad
     */
