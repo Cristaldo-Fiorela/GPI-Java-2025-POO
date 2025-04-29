@@ -34,8 +34,18 @@ public class Censo {
             System.out.println("Ingrese la EDAD:");
             datosPersona[1] = scanner.next();
 
-            System.out.println("Ingrese el Sexo (F/M):");
-            datosPersona[2] = scanner.next().toUpperCase();
+            boolean cargaValida = false;
+            
+            while (!cargaValida) {
+                System.out.println("Ingrese el Sexo (F/M):");
+                datosPersona[2] = scanner.next().toUpperCase();
+                
+                if (datosPersona[2].equals("F") || datosPersona[2].equals("M")) {
+                    cargaValida = true;
+                } else {
+                    System.out.println("Sexo inválido. Por favor, ingrese 'F' o 'M'.");
+                }
+            }
 
             censo.add(datosPersona);
         }
@@ -58,9 +68,33 @@ public class Censo {
         return total;
     }
     
+    public double getPorcentajeVarones() {
+        ArrayList<String[]> varones = new ArrayList<>();
+        int totalEnRango = 0;
+        double porcentaje = 0;
+        
+        for (String[] persona : censo) {
+            String sexo = persona[2];
+           
+            if (sexo.charAt(0) == 'M') {
+              varones.add(persona);
+            }
+        }
+        
+        for (String[] varon : varones) {
+            int edad = Integer.parseInt(varon[1]);
+            if ( edad <= 65 && edad >= 16 ) {
+                totalEnRango++;
+            }
+        }
+        
+        porcentaje = (double) totalEnRango / varones.size() * 100;
+       
+        return porcentaje;    
+    }
+    
     /*
         informar:
-            - porcentaje VARONES entre 16 y 65 respecto al TOTAL de varones
             - mostrar todos los datos de la persona con mayor edad
     */
 
