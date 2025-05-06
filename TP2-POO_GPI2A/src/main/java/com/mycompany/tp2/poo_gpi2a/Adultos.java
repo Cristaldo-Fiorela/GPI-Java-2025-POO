@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.tp2.poo_gpi2a;
 
-/**
- *
- * @author Fio
- */
-public class Adultos {
-    
+public class Adultos extends Pacientes{
+    private String PA, altura;
+    private double peso;
 }
