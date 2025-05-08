@@ -7,7 +7,8 @@ public class Internados extends Pacientes implements IAdministracion, INutricion
     public Internados() {
     }
 
-    public Internados(int habitacion, String PA, String rh) {
+    public Internados(int habitacion, String PA, String rh, int DNI, String nombre, String obraSocial) {
+        super(DNI, nombre, obraSocial);
         this.habitacion = habitacion;
         this.PA = PA;
         this.rh = rh;

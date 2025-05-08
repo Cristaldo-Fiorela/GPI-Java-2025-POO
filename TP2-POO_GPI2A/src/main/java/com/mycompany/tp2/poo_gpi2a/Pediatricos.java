@@ -7,8 +7,9 @@ public class Pediatricos extends Pacientes implements IAdministracion, INutricio
 
     public Pediatricos() {
     }
-    
-    public Pediatricos(double peso, int celular, String tutor) {
+
+    public Pediatricos(double peso, int celular, String tutor, int DNI, String nombre, String obraSocial) {
+        super(DNI, nombre, obraSocial);
         this.peso = peso;
         this.celular = celular;
         this.tutor = tutor;

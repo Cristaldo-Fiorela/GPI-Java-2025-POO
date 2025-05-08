@@ -7,12 +7,13 @@ public class Adultos extends Pacientes implements IAdministracion, IClinicaMedic
     public Adultos() {
     }
 
-    public Adultos(String PA, String altura, double peso) {
+    public Adultos(String PA, String altura, double peso, int DNI, String nombre, String obraSocial) {
+        super(DNI, nombre, obraSocial);
         this.PA = PA;
         this.altura = altura;
         this.peso = peso;
     }
-
+    
     @Override
     public String cobertura() {
         return "Cobertura Adulto";
