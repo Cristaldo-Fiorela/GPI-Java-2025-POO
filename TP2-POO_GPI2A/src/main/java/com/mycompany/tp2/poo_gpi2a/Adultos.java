@@ -15,8 +15,8 @@ public class Adultos extends Pacientes implements IAdministracion, IClinicaMedic
     }
     
     @Override
-    public String cobertura() {
-        return "Cobertura Adulto";
+    public void cobertura() {
+        System.out.println("Cobertura Adulto");
     }
 
     @Override
@@ -25,17 +25,17 @@ public class Adultos extends Pacientes implements IAdministracion, IClinicaMedic
     }
 
     @Override
-    public String rx() {
-        return "rx adulto";
+    public void rx() {
+        System.out.println("rx adulto");
     }
 
     @Override
-    public String vademecum() {
-        return "vademecum adulto";
+    public void vademecum() {
+        System.out.println("vademecum adulto");
     }
 
     @Override
-    public char sangre() {
-        return 'A';
+    public void sangre() {
+        System.out.println("sangre adultos");
     }
 }

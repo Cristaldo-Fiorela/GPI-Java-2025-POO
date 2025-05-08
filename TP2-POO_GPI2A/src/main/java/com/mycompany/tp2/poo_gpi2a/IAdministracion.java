@@ -1,7 +1,7 @@
 package com.mycompany.tp2.poo_gpi2a;
 
 public interface IAdministracion {
-   public String cobertura();
+   public void cobertura();
    public double descuento();
-   public String vademecum();
+   public void vademecum();
 }

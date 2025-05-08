@@ -15,8 +15,8 @@ public class Internados extends Pacientes implements IAdministracion, INutricion
     }
 
     @Override
-    public String cobertura() {
-        return "Cobertura Internado";
+    public void cobertura() {
+        System.out.println("Cobertura Internado");
     }
 
     @Override
@@ -25,23 +25,23 @@ public class Internados extends Pacientes implements IAdministracion, INutricion
     }
 
     @Override
-    public String vademecum() {
-        return "vademecum internado";
+    public void vademecum() {
+        System.out.println("vademecum internado");
     }
 
     @Override
-    public String tipoDieta() {
-        return "dieta baja en sodio";
+    public void tipoDieta() {
+        System.out.println("dieta baja en sodio");
     }
 
     @Override
-    public String rx() {
-        return "rx internado";
+    public void rx() {
+        System.out.println("rx internado");
     }
 
     @Override
-    public char sangre() {
-        return 'B';
+    public void sangre() {
+        System.out.println("sangre internados");
     }
     
 }

@@ -16,8 +16,8 @@ public class Pediatricos extends Pacientes implements IAdministracion, INutricio
     }
 
     @Override
-    public String cobertura() {
-        return "Cobertura pediatrica";
+    public void cobertura() {
+        System.out.println("Cobertura pediatrica");
     }
 
     @Override
@@ -26,13 +26,13 @@ public class Pediatricos extends Pacientes implements IAdministracion, INutricio
     }
 
     @Override
-    public String tipoDieta() {
-        return "dieta blanda infantil, no carne molida";
+    public void tipoDieta() {
+        System.out.println("dieta blanda infantil, no carne molida");
     }
 
     @Override
-    public String vademecum() {
-        return "vademecum pediatrico";
+    public void vademecum() {
+        System.out.println("vademecum pediatrico");
     }
 
 }
