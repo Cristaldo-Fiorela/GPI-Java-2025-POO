@@ -8,6 +8,6 @@ public class Sobrepeso implements IEstadoIMC {
 
     @Override
     public String getNombreEstado() {
-        return "Soprepeso";
+        return "Sobrepeso";
     }
 }
