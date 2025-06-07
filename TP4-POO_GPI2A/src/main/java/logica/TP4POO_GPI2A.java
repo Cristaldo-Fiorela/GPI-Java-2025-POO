@@ -1,4 +1,4 @@
-package cristaldo.tp4.poo_gpi2a;
+package logica;
 
 public class TP4POO_GPI2A {
 
