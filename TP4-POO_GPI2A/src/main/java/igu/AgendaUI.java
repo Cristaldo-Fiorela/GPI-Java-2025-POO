@@ -4,17 +4,21 @@
  */
 package igu;
 
+import logica.ControladorAgenda;
+import logica.Persona;
+
 /**
  *
  * @author Fio
  */
 public class AgendaUI extends javax.swing.JFrame {
-
+    private ControladorAgenda controlador;
     /**
      * Creates new form agenda
      */
     public AgendaUI() {
         initComponents();
+        controlador = new ControladorAgenda();
     }
 
     /**
@@ -277,27 +281,23 @@ public class AgendaUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        String indice = indiceActual.getText();
-        int i = Integer.parseInt(indice);
-
-        if (i > 0) {
-            i--;
-            indice = String.valueOf(i);
-            indiceActual.setText(indice);
-        }
+        String[] datosActuales = obtenerDatosCampos();
        
+       controlador.contactoAnterior(datosActuales[0], datosActuales[1], datosActuales[2], datosActuales[3]);
+       actualizarCampos();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnAdelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdelanteActionPerformed
-        String indice = indiceActual.getText();
-        int i = Integer.parseInt(indice);
-        i++;
-        indice = String.valueOf(i);
-        
-        indiceActual.setText(indice);
+       String[] datosActuales = obtenerDatosCampos();
+       
+       controlador.siguienteContacto(datosActuales[0], datosActuales[1], datosActuales[2], datosActuales[3]);
+       actualizarCampos();
     }//GEN-LAST:event_btnAdelanteActionPerformed
 
     private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
+       String[] datosActuales = obtenerDatosCampos();
+       controlador.guardarContacto(datosActuales[0], datosActuales[1], datosActuales[2], datosActuales[3]);
+
     }//GEN-LAST:event_btnGrabarActionPerformed
 
     private void indiceActualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_indiceActualActionPerformed
@@ -305,7 +305,27 @@ public class AgendaUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_indiceActualActionPerformed
 
-
+    private void actualizarCampos() {
+        Persona personaActual = controlador.getPersonaActual();
+        if ( personaActual != null ) {
+            txtNombre.setText(personaActual.getNombre());
+            txtApellido.setText(personaActual.getApellido());
+            txtTelefono.setText(personaActual.getTelefono());
+            txtDireccion.setText(personaActual.getDireccion());
+            indiceActual.setText(String.valueOf(controlador.getIndiceActual()));
+        }
+    }
+    
+    private String[] obtenerDatosCampos() {
+        return new String[] {
+            txtNombre.getText().trim(),
+            txtApellido.getText().trim(),
+            txtTelefono.getText().trim(),
+            txtDireccion.getText().trim(),
+        };
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdelante;
     private javax.swing.JButton btnAtras;
