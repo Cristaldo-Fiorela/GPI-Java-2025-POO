@@ -1,5 +1,7 @@
 package logica;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class ControladorAgenda {
@@ -46,5 +48,35 @@ public class ControladorAgenda {
     public int getIndiceActual() {
         return indiceActual;
     }
+    
+    public void guardarAgendaEnArchivo(String nombreArchivo) {
+    try {
+        FileWriter archivo = new FileWriter(nombreArchivo);
+        PrintWriter escritor = new PrintWriter(archivo);
+        
+        for (int i = 0; i < agenda.size(); i++) {
+            Persona persona = agenda.get(i);
+            
+            if (!persona.getNombre().isEmpty() || !persona.getApellido().isEmpty() || !persona.getTelefono().isEmpty() || !persona.getDireccion().isEmpty()) {
+                
+                escritor.println("Contacto " + (i + 1) + ":");
+                escritor.println("Nombre: " + persona.getNombre());
+                escritor.println("Apellido: " + persona.getApellido());
+                escritor.println("Teléfono: " + persona.getTelefono());
+                escritor.println("Dirección: " + persona.getDireccion());
+                escritor.println("-------------------");
+            }
+        }
+        
+        escritor.close();
+        archivo.close();
+        System.out.println("Agenda guardada exitosamente en: " + nombreArchivo);
+        
+    } catch (Exception err) {
+        System.out.println("Error: " + err.getMessage());
+    }
+}
+
+    
 
 }

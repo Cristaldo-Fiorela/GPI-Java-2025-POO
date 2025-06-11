@@ -297,6 +297,7 @@ public class AgendaUI extends javax.swing.JFrame {
     private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
        String[] datosActuales = obtenerDatosCampos();
        controlador.guardarContacto(datosActuales[0], datosActuales[1], datosActuales[2], datosActuales[3]);
+       controlador.guardarAgendaEnArchivo("C:\\Users\\Fio\\Documents\\NetBeansProjects\\GPI-Java-2025-POO\\TP4-POO_GPI2A\\src\\main\\java\\persistencia\\agenda.txt");
 
     }//GEN-LAST:event_btnGrabarActionPerformed
 
