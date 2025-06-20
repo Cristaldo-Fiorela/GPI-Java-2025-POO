@@ -7,6 +7,11 @@ import modelo.interfaces.IBibliotecaDAO;
 public class DAOImplPostgreSQL implements IBibliotecaDAO{
     private static List<Libro> bibliotecaPost = new ArrayList<>();
     private static int contador = 1;
+    private String motor;
+
+    public DAOImplPostgreSQL(String motor) {
+        this.motor = motor;
+    }
 
     @Override
     public List<Libro> obtenerLibros() {
