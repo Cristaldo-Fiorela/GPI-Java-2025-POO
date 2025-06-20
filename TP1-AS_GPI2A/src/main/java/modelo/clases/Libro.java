@@ -7,6 +7,11 @@ public class Libro {
 
     public Libro() {
     }
+    
+    public Libro(String titulo, String autor) {
+        this.titulo = titulo;
+        this.autor = autor;
+    }
 
     public Libro(int id, String titulo, String autor) {
         this.id = id;

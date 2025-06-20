@@ -4,17 +4,25 @@
  */
 package vista;
 
+import controlador.BibliotecaController;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import modelo.clases.Libro;
+
 /**
  *
  * @author Fio
  */
 public class GUI extends javax.swing.JFrame {
-
+    private BibliotecaController controlador;
+    private DefaultTableModel modeloTabla;
     /**
      * Creates new form GUI
      */
     public GUI() {
         initComponents();
+        inicializarModeloTabla();
     }
 
     /**
@@ -26,6 +34,7 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         radioSQL = new javax.swing.JRadioButton();
         radioPost = new javax.swing.JRadioButton();
@@ -54,7 +63,9 @@ public class GUI extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
+        buttonGroup1.add(radioSQL);
         radioSQL.setForeground(new java.awt.Color(0, 0, 0));
+        radioSQL.setSelected(true);
         radioSQL.setText("Base SQL");
         radioSQL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,6 +73,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(radioPost);
         radioPost.setForeground(new java.awt.Color(0, 0, 0));
         radioPost.setText("Base PostgreSQL");
         radioPost.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +97,7 @@ public class GUI extends javax.swing.JFrame {
                 java.lang.Integer.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, true
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -134,23 +146,20 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(txtNewTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(txtNewTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(txtNewAutor, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(112, 112, 112))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                    .addContainerGap(695, Short.MAX_VALUE)
-                    .addComponent(btnSave)
-                    .addGap(16, 16, 16)))
+                        .addComponent(txtNewAutor, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSave)))
+                .addGap(18, 18, 18))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,13 +175,10 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNewAutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtNewAutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSave))))
                 .addContainerGap(22, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                    .addContainerGap(97, Short.MAX_VALUE)
-                    .addComponent(btnSave)
-                    .addGap(11, 11, 11)))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -315,10 +321,16 @@ public class GUI extends javax.swing.JFrame {
 
     private void radioSQLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioSQLActionPerformed
         // TODO add your handling code here:
+        if(controlador != null) {
+            controlador.cambiarBiblioteca("SQL");
+        }
     }//GEN-LAST:event_radioSQLActionPerformed
 
     private void radioPostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioPostActionPerformed
         // TODO add your handling code here:
+        if(controlador != null) {
+            controlador.cambiarBiblioteca("POST");
+        }
     }//GEN-LAST:event_radioPostActionPerformed
 
     private void txtNewTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNewTitleActionPerformed
@@ -331,16 +343,61 @@ public class GUI extends javax.swing.JFrame {
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
+        try {
+            int id = Integer.parseInt(txtID.getText().trim());
+            
+            if(controlador.eliminarLibro(id)) {
+                JOptionPane.showMessageDialog(this, "Libro eliminado correctamente", "Exito", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "No se encontro un libro con el ID:" + id, "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Por favor ingrese un ID valido", "Error de formato", JOptionPane.WARNING_MESSAGE);
+        }        
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        // TODO add your handling code here:
+        String titulo  = txtNewTitle.getText().trim();
+        String autor = txtNewAutor.getText().trim();
+        
+        controlador.agregarLibro(titulo, autor);
     }//GEN-LAST:event_btnSaveActionPerformed
+    
+    public void setControlador(BibliotecaController controlador) {
+        this.controlador = controlador;
+    }
+    
+    public void inicializarModeloTabla() {
+        modeloTabla = (DefaultTableModel) table.getModel();
+        modeloTabla.setRowCount(0);
+    }
+    
+    public void limpiarFormulario() {
+        txtNewTitle.setText("");
+        txtNewAutor.setText("");
+    }
 
+    public void limpiarCampoEliminar() {
+        txtID.setText("");
+    } 
+    
+    public void actualizarTabla(List<Libro> libros) {
+        modeloTabla.setRowCount(0);
+        
+        for (Libro libro : libros) {
+            Object fila[] = {
+                libro.getId(),                 
+                libro.getTitulo(),
+                libro.getAutor(), 
+            };
+            modeloTabla.addRow(fila);
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnSave;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
