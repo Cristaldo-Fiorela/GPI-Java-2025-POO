@@ -20,7 +20,7 @@ public class CScrap {
             Elements productos = doc.select("a.poly-component__title");
             Elements precio = doc.select("div.poly-price__current");
             Elements preciosOferta = doc.select("div.poly-component__price");
-                        
+            
             // seteando tabla y nombre de valores de columnas
             DefaultTableModel modelo = new DefaultTableModel(new Object[] {"Titulo", "Precio", "Precio Oferta", "Enlace"}, 0);
             resultado.setModel(modelo);
