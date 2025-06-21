@@ -25,6 +25,10 @@ Aquí vas a encontrar los trabajos prácticos y ejercitaciones que fui realizand
 - **Código:** `TP4-POO_GPI2A`
 - **Descripción:** Sistema de gestión de contactos.
 
+### 📅 **TP5 - Scraping MP**
+- **Código:** `TP5-POO_GPI2A`
+- **Descripción:** Scraping de pagina web Mercado Libre.
+
 ---
 
 # 📚 Arquitectura de Software
