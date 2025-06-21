@@ -1,19 +1,11 @@
 # 🔧📘 Programación Orientada a Objetos - Trabajos Prácticos y Ejercitaciones 🖥️
 
 ¡Bienvenidos/as a este repositorio! 🚀  
-Aquí vas a encontrar los trabajos prácticos y ejercitaciones que fui realizando para la materia **Programación Orientada a Objetos (POO)** durante el segundo año del curso **GPI 2 "A"**.
+Aquí vas a encontrar los trabajos prácticos y ejercitaciones que fui realizando para la materia **Programación Orientada a Objetos (POO)**  y **Arquitectura de Software** durante el segundo año del curso **GPI 2 "A"**.
 
 ---
 
 # 📚 Programación Orientada a Objetos (POO)
-
-## 📋 Información del Curso
-
-**📌 Materia:** Programación Orientada a Objetos (POO) 🧩  
-**📅 Ciclo lectivo:** 2do Año  
-**🎓 Carrera:** Técnico Superior en Gestión en Programación e Innovación Tecnológica y Digital
-
----
 
 ## 💻 Proyectos Desarrollados
 
@@ -32,6 +24,10 @@ Aquí vas a encontrar los trabajos prácticos y ejercitaciones que fui realizand
 ### 📅 **TP4 - Agenda**
 - **Código:** `TP4-POO_GPI2A`
 - **Descripción:** Sistema de gestión de contactos.
+
+---
+
+# 📚 Arquitectura de Software
 
 ### 📖 **TP1-AS - Biblioteca**
 - **Código:** `TP1-AS_GPI2A`
