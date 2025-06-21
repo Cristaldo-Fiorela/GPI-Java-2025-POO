@@ -5,26 +5,45 @@ Aquí vas a encontrar los trabajos prácticos y ejercitaciones que fui realizand
 
 ---
 
-📌 **Materia**:
-- Programación Orientada a Objetos (POO) 🧩
-📅 **Ciclo lectivo**: 
-- 2do Año 
-🎓 **Carrera**: 
-- Técnico Superior en Gestión en Programación e Innovación Tecnológica y Digital
+# 📚 Programación Orientada a Objetos (POO)
+
+## 📋 Información del Curso
+
+**📌 Materia:** Programación Orientada a Objetos (POO) 🧩  
+**📅 Ciclo lectivo:** 2do Año  
+**🎓 Carrera:** Técnico Superior en Gestión en Programación e Innovación Tecnológica y Digital
 
 ---
 
-## 💻🐱‍💻 Proyectos
-**Ejercicios de Algoritmos** 
-- TP1-POO_GPI2A
-**Práctica de Clases Abstractas e Interfaces en Java** 
-- TP2-POO_GPI2A
-**Calculadora IMC** 
-- TP3-POO_GPI2A
-**Agenda** 
-- TP4-POO_GPI2A
-**Biblioteca** 
-- TP1-AS_GPI2A
+## 💻 Proyectos Desarrollados
+
+### 🔢 **TP1 - Ejercicios de Algoritmos**
+- **Código:** `TP1-POO_GPI2A`
+- **Descripción:** Implementación de algoritmos fundamentales usando POO
+
+### 🏗️ **TP2 - Práctica de Clases Abstractas e Interfaces**
+- **Código:** `TP2-POO_GPI2A`
+- **Descripción:** Ejercicios prácticos con clases abstractas e interfaces en Java
+
+### ⚖️ **TP3 - Calculadora IMC**
+- **Código:** `TP3-POO_GPI2A`
+- **Descripción:** Aplicación para calcular el Índice de Masa Corporal con conceptos anteriormente aprendidos.
+
+### 📅 **TP4 - Agenda**
+- **Código:** `TP4-POO_GPI2A`
+- **Descripción:** Sistema de gestión de contactos.
+
+### 📖 **TP1-AS - Biblioteca**
+- **Código:** `TP1-AS_GPI2A`
+- **Descripción:** Gestion de biblioteca aplicando patrones arquitectónicos y de diseño: MVC (Modelo-Vista-Controlador), DAO (Data Access Object), Inyección de Dependencias y Factor
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Lenguaje:** Java
+- **Paradigma:** Programación Orientada a Objetos
+- **Conceptos aplicados:** Herencia, Polimorfismo, Encapsulación, Abstracción
 
 ---
 
