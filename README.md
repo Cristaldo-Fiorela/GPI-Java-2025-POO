@@ -7,8 +7,24 @@ Aquí vas a encontrar los trabajos prácticos y ejercitaciones que fui realizand
 
 📌 **Materia**:
 - Programación Orientada a Objetos (POO) 🧩
-📅 **Ciclo lectivo**: 2do Año 
-🎓 **Carrera**: Técnico Superior en Gestión en Programación e Innovación Tecnológica y Digital
+📅 **Ciclo lectivo**: 
+- 2do Año 
+🎓 **Carrera**: 
+- Técnico Superior en Gestión en Programación e Innovación Tecnológica y Digital
+
+---
+
+## 💻🐱‍💻 Proyectos
+**Ejercicios de Algoritmos** 
+- TP1-POO_GPI2A
+**Práctica de Clases Abstractas e Interfaces en Java** 
+- TP2-POO_GPI2A
+**Calculadora IMC** 
+- TP3-POO_GPI2A
+**Agenda** 
+- TP4-POO_GPI2A
+**Biblioteca** 
+- TP1-AS_GPI2A
 
 ---
 
