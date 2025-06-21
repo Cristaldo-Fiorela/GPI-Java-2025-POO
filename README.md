@@ -1,4 +1,4 @@
-# 🔧📘 Programación Orientada a Objetos - Trabajos Prácticos y Ejercitaciones 🖥️
+# 🔧📘 Trabajos Prácticos y Ejercitaciones 🖥️
 
 ¡Bienvenidos/as a este repositorio! 🚀  
 Aquí vas a encontrar los trabajos prácticos y ejercitaciones que fui realizando para la materia **Programación Orientada a Objetos (POO)**  y **Arquitectura de Software** durante el segundo año del curso **GPI 2 "A"**.
@@ -38,8 +38,7 @@ Aquí vas a encontrar los trabajos prácticos y ejercitaciones que fui realizand
 ## 🛠️ Tecnologías Utilizadas
 
 - **Lenguaje:** Java
-- **Paradigma:** Programación Orientada a Objetos
-- **Conceptos aplicados:** Herencia, Polimorfismo, Encapsulación, Abstracción
+- **Conceptos aplicados:** Herencia, Polimorfismo, Encapsulación, Abstracción, Patrones de diseño, Patrones arquitectónicos.
 
 ---
 
